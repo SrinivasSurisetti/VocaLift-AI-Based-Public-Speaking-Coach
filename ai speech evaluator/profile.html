@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile - VocaLift</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+   <div id="navbar-container"></div>
+
+
+
+  <!-- CONTAINER -->
+  <div class="container">
+    <!-- PROFILE HEADER -->
+ <!-- PROFILE HEADER -->
+<div class="profile-header-card">
+  <div class="profile-header-left">
+    <img src="https://via.placeholder.com/80" alt="User Avatar" class="profile-avatar" id="userAvatar">
+    <div class="profile-details">
+      <h1><span id="userName">Alex Johnson</span></h1>
+      <p class="profile-email"><span id="userEmail">demo@vocalift.com</span></p>
+      <p class="profile-member-since">Member since <span id="memberSince">2024-01-15</span></p>
+      <p class="profile-achievements"><i class="fas fa-trophy"></i> <span id="achievementCount">3</span> Achievements Earned</p>
+    </div>
+  </div>
+  <div class="profile-header-right">
+    <i class="fas fa-cog settings-icon"></i>
+    <button id="logoutBtn" class="logout-button">
+  <i class="fas fa-sign-out-alt"></i> Logout
+</button>
+
+  </div>
+</div>
+
+
+    <!-- TABS -->
+    <div class="tabs">
+      <div class="tab-item active" data-tab="overview">Overview</div>
+      <div class="tab-item" data-tab="achievements">Achievements</div>
+      <div class="tab-item" data-tab="activity">Activity</div>
+      <div class="tab-item" data-tab="settings">Settings</div>
+    </div>
+
+    <!-- OVERVIEW TAB -->
+    <div class="tab-content active" id="overview">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="total-sessions">47</div>
+          <div class="stat-label">Total Sessions</div>
+          <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="hours-practiced">23.5</div>
+          <div class="stat-label">Hours Practiced</div>
+          <div class="stat-icon"><i class="fas fa-clock"></i></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="avg-score">8.4</div>
+          <div class="stat-label">Avg Score</div>
+          <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="streak-days">12</div>
+          <div class="stat-label">Streak Days</div>
+          <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+        </div>
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <div class="quick-actions-card">
+        <div id="actionStatus" class="action-status"></div>
+        <h2>Quick Actions</h2>
+        <div class="action-buttons">
+          <button class="action-button export-report"><i class="fas fa-download"></i> Export Progress Report</button>
+          <button class="action-button share-achievement"><i class="fas fa-share-alt"></i> Share Achievement</button>
+          <button class="action-button set-reminder"><i class="fas fa-bell"></i> Set Practice Reminder</button>
+
+          <!-- SHARE PANEL -->
+          <div class="share-panel hidden" id="sharePanel">
+            <button class="close-share-panel" id="closeSharePanel">&times;</button>
+            <a href="#" target="_blank" id="whatsappShare"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank" id="linkedinShare"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" id="twitterShare"><i class="fab fa-twitter"></i></a>
+            <button id="copyShare"><i class="fas fa-copy"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTHER TABS -->
+    <div class="tab-content" id="achievements">
+      <div class="empty-state-card">
+        <i class="fas fa-trophy-alt empty-icon"></i>
+        <p class="empty-message">No achievements earned yet!</p>
+        <p class="empty-sub-message">Keep practicing to unlock new badges and milestones.</p>
+        <button class="empty-state-button">Start Practice</button>
+      </div>
+    </div>
+
+    <div class="tab-content" id="activity">
+      <div class="empty-state-card">
+        <i class="fas fa-clipboard-list empty-icon"></i>
+        <p class="empty-message">No activity recorded yet!</p>
+        <p class="empty-sub-message">Start a session to see your progress here.</p>
+        <button class="empty-state-button">Record a Session</button>
+      </div>
+    </div>
+
+    <div class="tab-content" id="settings">
+      <div class="settings-card">
+        <h2>Account Settings</h2>
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" value="Alex Johnson">
+        </div>
+        <div class="form-group">
+          <label for="email-address">Email Address</label>
+          <input type="email" id="email-address" value="demo@vocalift.com" readonly>
+        </div>
+      </div>
+      <div class="settings-card">
+        <h2>Preferences</h2>
+        <div class="preference-item">
+          <label for="email-notifications">Email Notifications</label>
+          <input type="checkbox" id="email-notifications" checked>
+        </div>
+        <div class="preference-item">
+          <label for="practice-reminders">Practice Reminders</label>
+          <input type="checkbox" id="practice-reminders">
+        </div>
+        <div class="preference-item">
+          <label for="achievement-notifications">Achievement Notifications</label>
+          <input type="checkbox" id="achievement-notifications" checked>
+        </div>
+      </div>
+      <div class="settings-card">
+        <h2>Privacy & Security</h2>
+        <div class="privacy-action">
+          <i class="fas fa-key"></i>
+          <a href="#">Change Password</a>
+        </div>
+        <div class="privacy-action">
+          <i class="fas fa-download"></i>
+          <a href="#">Download My Data</a>
+        </div>
+        <div class="privacy-action delete-account">
+          <i class="fas fa-user-times"></i>
+          <a href="#">Delete Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REMINDER MODAL -->
+  <div id="reminderModal" class="modal hidden">
+    <div class="reminder-form">
+      <h3>Set Practice Reminder</h3>
+      <label for="reminderDateTime">Choose Date & Time:</label>
+      <input type="datetime-local" id="reminderDateTime" />
+      <div class="reminder-buttons">
+        <button id="confirmReminder">Set Reminder</button>
+        <button id="cancelReminder">Cancel</button>
+      </div>
+      <div id="reminderStatus" class="reminder-status"></div>
+    </div>
+  </div>
+ <script type="module" src="profile.js"></script>
+ <script type="module" src="navbar.js"></script>
+
+
+  <!-- FIXED SCRIPT -->
+  
+
+</body>
+</html>

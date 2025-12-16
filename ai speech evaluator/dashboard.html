@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VocaLift</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+  <!-- Navbar Container -->
+  <div id="navbar-container"></div>
+
+  <div class="container">
+    <!-- Main Dashboard Section -->
+    <div class="dashboard-container">
+      <h1>Welcome back, <span id="welcomeName">User</span>!</h1>
+      <p class="subtitle">Ready to improve your speaking skills today?</p>
+
+      <!-- Stat Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="totalSessions">0</div>
+          <div class="stat-label"><i class="fas fa-microphone"></i> Total Sessions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="averageScore">0.0</div>
+          <div class="stat-label"><i class="fas fa-chart-bar"></i> Average Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="improvement">+0%</div>
+          <div class="stat-label"><i class="fas fa-arrow-up-right-dots"></i> Improvement</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="streakDays">0</div>
+          <div class="stat-label"><i class="fas fa-user-clock"></i> Streak Days</div>
+        </div>
+      </div>
+
+      <!-- Quick Actions & Weekly Progress -->
+      <div class="main-grid">
+        <div class="card quick-actions">
+          <h3>Quick Actions</h3>
+          <div class="action-button orange"><i class="fas fa-circle-dot"></i> Start Recording</div>
+          <div class="action-button green"><i class="fas fa-book-open"></i> Practice Scripts</div>
+          <div class="action-button purple"><i class="fas fa-chart-line"></i> View Analysis</div>
+        </div>
+
+        <div class="card progress">
+          <h3>Weekly Progress</h3>
+          <div class="progress-bar"><span>Speech Clarity</span><span>85%</span></div>
+          <div class="bar orange-bar" style="width: 85%;"></div>
+
+          <div class="progress-bar"><span>Confidence Level</span><span>78%</span></div>
+          <div class="bar green-bar" style="width: 78%;"></div>
+
+          <div class="progress-bar"><span>Body Language</span><span>92%</span></div>
+          <div class="bar blue-bar" style="width: 92%;"></div>
+
+          <div class="progress-bar"><span>Pace Control</span><span>71%</span></div>
+          <div class="bar purple-bar" style="width: 71%;"></div>
+        </div>
+      </div>
+
+      <!-- Recent Sessions & Achievements -->
+      <div class="main-grid">
+        <div class="card recent-sessions">
+          <h3>Recent Sessions</h3>
+          <div class="session-item">
+            <div>
+              <strong>Job Interview Practice</strong><br><small>2024-01-15</small>
+            </div>
+            <div>8.7 · 12 min</div>
+          </div>
+          <div class="session-item">
+            <div>
+              <strong>Presentation Skills</strong><br><small>2024-01-14</small>
+            </div>
+            <div>7.9 · 8 min</div>
+          </div>
+          <div class="session-item">
+            <div>
+              <strong>Public Speaking</strong><br><small>2024-01-13</small>
+            </div>
+            <div>8.2 · 15 min</div>
+          </div>
+        </div>
+
+        <div class="card achievements">
+          <h3>Achievements</h3>
+          <div class="achievement success">
+            <i class="fas fa-bolt"></i> First Session<br>
+            <small>Completed your first speaking session</small>
+          </div>
+          <div class="achievement success">
+            <i class="fas fa-bolt"></i> Week Streak<br>
+            <small>Practiced for 7 consecutive days</small>
+          </div>
+          <div class="achievement success">
+            <i class="fas fa-bolt"></i> High Scorer<br>
+            <small>Achieved a score above 8.5</small>
+          </div>
+          <div class="achievement disabled">
+            <i class="fas fa-bolt"></i> Confidence Builder<br>
+            <small>Complete 50 speaking sessions</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="dashboard.js"></script>
+  <script type="module" src="navbar.js"></script>
+</body>
+</html>

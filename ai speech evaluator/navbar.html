@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VocaLift</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <!-- LEFT side -->
+    <div class="navbar-left">
+      <a href="dashboard.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-microphone"></i></span>
+        <span class="logo-text">VocaLift</span>
+      </a>
+      <nav class="nav-links">
+        <a href="dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+        <a href="record.html" class="nav-item"><i class="fas fa-record-vinyl"></i> Record</a>
+        <a href="analysis.html" class="nav-item"><i class="fas fa-chart-line"></i> Analysis</a>
+        <a href="practice.html" class="nav-item"><i class="fas fa-book-open"></i> Practice</a>
+        <a href="profile.html" class="nav-item"><i class="fas fa-user"></i> Profile</a>
+      </nav>
+    </div>
+
+    <!-- RIGHT side (no profile image) -->
+    <div class="navbar-right">
+      <div class="profile-info">
+        <span class="name" id="navbarUserName">Loading...</span>
+        <span class="email" id="navbarUserEmail">Loading...</span>
+      </div>
+      <div class="logout"><i class="fas fa-sign-out-alt"></i></div>
+    </div>
+  </div>
+</header>
+
+<script type="module" src="navbar.js"></script>
+
+
+</body>
+</html>

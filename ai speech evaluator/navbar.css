@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  padding-top: 84px; /* 72px navbar + 12px top space */
+}
+
+/* Optional: visible top space */
+body::before {
+  content: '';
+  display: block;
+  height: 12px;
+  background-color: #f9f9f9; /* Match page background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 12px; /* pushes navbar down by 12px */
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+/* Container */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #F25C05;
+  text-decoration: none;
+}
+
+.logo-icon {
+  background-color: #F25C05;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #F25C05;
+  border-bottom: 2px solid #ffe1cc;
+}
+
+.nav-item.active {
+  color: #F25C05;
+  border-bottom: 2px solid #F25C05;
+  font-weight: 600;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.email {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.logout {
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}

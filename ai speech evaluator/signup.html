@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VocaLift | Signup</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+
+  <div class="container" id="signupContainer">
+
+    <!-- LEFT PANEL -->
+    <div class="left">
+      <h1>Welcome to <span style="color: white;">VocaLift</span> 🎤</h1>
+      <p>Create your account to start your speaking journey!</p>
+
+      <div class="features">
+        <div>🎙 Record or Upload Speeches</div>
+        <div>🧠 Real-Time AI Feedback</div>
+        <div>📊 Track Your Progress</div>
+      </div>
+
+      <button onclick="window.location.href='login.html'">← Back to Login</button>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+      <h2>Sign Up</h2>
+      <p>Create a free account to get started</p>
+
+      <input type="text" placeholder="Full Name" id="nameInput" />
+      <input type="email" placeholder="Email Address" id="emailInput" />
+      <input type="password" placeholder="Password" id="passwordInput" />
+
+      <button class="signup-btn" onclick="handleSignup()">Sign Up</button>
+      <p id="signupStatus" style="margin-top: 10px;"></p>
+
+    </div>
+  </div>
+
+  <script type="module" src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f6f5;
+  color: #333;
+}
+
+/* Container - Center page and reduce top gap */
+.container {
+  max-width: 860px;
+  margin: 20px auto 40px;
+  padding: 0 24px;
+}
+
+/* Back to Practice link */
+.back-link {
+  color: #9e2b2b;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* Main Title */
+.main-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #f26b1f;
+  text-align: left;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* Card box */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px 32px 24px 32px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Headings inside card */
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #f26b1f;
+}
+
+/* Instruction List Styling */
+.instruction-list {
+  list-style: none;
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+.instruction-list li {
+  margin-bottom: 14px;
+  font-size: 17px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.instruction-list li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: #f26b1f;
+  font-weight: bold;
+}
+
+/* Exercises Numbered List Styling */
+.exercise-list {
+  list-style: none;
+  counter-reset: exercise;
+  padding-left: 0;
+}
+
+.exercise-list li {
+  counter-increment: exercise;
+  padding-left: 52px;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.exercise-list li::before {
+  content: counter(exercise);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #f26b1f;
+  color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Complete Button - Small and Centered */
+.complete-btn {
+  background-color: #f26b1f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 30px auto 0;
+  display: block;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.complete-btn:hover {
+  background-color: #d24c15;
+}

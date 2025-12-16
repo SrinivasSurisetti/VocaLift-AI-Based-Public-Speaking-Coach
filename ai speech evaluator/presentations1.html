@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Presentations | VocaLift</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="practice.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="navbar-left">
+        <a href="dashboard.html" class="logo">
+          <span class="logo-icon"><i class="fas fa-microphone"></i></span>
+          <span class="logo-text">VocaLift</span>
+        </a>
+        <nav class="nav-links">
+          <a href="dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+          <a href="record.html" class="nav-item"><i class="fas fa-record-vinyl"></i> Record</a>
+          <a href="analysis.html" class="nav-item"><i class="fas fa-chart-line"></i> Analysis</a>
+          <a href="practice.html" class="nav-item active"><i class="fas fa-book-open"></i> Practice</a>
+          <a href="profile.html" class="nav-item"><i class="fas fa-user"></i> Profile</a>
+        </nav>
+      </div>
+
+      <div class="navbar-right">
+        <div class="profile">
+          <div class="profile-info">
+            <div class="name" id="navbarUserName">Alex Johnson</div>
+            <div class="email" id="navbarUserEmail">demo@vocalift.com</div>
+          </div>
+        </div>
+        <div class="logout"><i class="fas fa-sign-out-alt"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Category Navigation -->
+    <section class="category-filter">
+  <div class="categories">
+    <a href="practice.html" class="category-btn">Interview</a>
+    <a href="presentations1.html" class="category-btn active">Presentations</a>
+    <a href="academic.html" class="category-btn">Academic</a>
+    <a href="personalstories.html" class="category-btn">Personal Stories</a>
+  </div>
+</section>
+
+
+
+    <!-- Presentation Practice Options -->
+    <section class="practice-cards">
+
+      <!-- Product Launch Presentation Card -->
+      <div class="card beginner">
+        <div class="card-header">
+          <h4>Product Launch Presentation <span class="tag">Beginner</span></h4>
+          <p>Present a new product to stakeholders</p>
+          <div class="meta-info">
+            <span>⏱️ 5-7 minutes</span> &nbsp; | &nbsp; <span>📋 5 Questions</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <b>Practice Prompt:</b>
+          <p>Present a new product launch including features, benefits, target market, and launch strategy.</p>
+          <b>💡 Tips for Success:</b>
+          <ul>
+            <li>Start with a compelling hook</li>
+            <li>Use clear structure</li>
+          </ul>
+        </div>
+        <a href="Product-Presentation.html" class="start-btn orange-btn">▶ Start Practice</a>
+      </div>
+
+      <!-- Quarterly Business Review Card -->
+      <div class="card intermediate">
+        <div class="card-header">
+          <h4>Quarterly Business Review <span class="tag">Intermediate</span></h4>
+          <p>Review performance metrics and future plans</p>
+          <div class="meta-info">
+            <span>⏱️ 3-5 minutes</span> &nbsp; | &nbsp; <span>📋 5 Questions</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <b>Practice Prompt:</b>
+          <p>Present quarterly results, analyze performance, and outline plans for the next quarter.</p>
+          <b>💡 Tips for Success:</b>
+          <ul>
+            <li>Use data to support your points</li>
+            <li>Address both successes and challenges</li>
+          </ul>
+        </div>
+        <a href="Quaterly-bussiness.html" class="start-btn orange-btn">▶ Start Practice</a>
+      </div>
+
+    </section>
+  </main>
+
+  <script type="module" src="practice.js"></script>
+</body>
+</html>

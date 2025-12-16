@@ -1,0 +1,226 @@
+/* ============================
+   GLOBAL STYLES
+============================ */
+body {
+  background: #fffaf6;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1f1f1f;
+}
+
+h1, h2, h3 {
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* ============================
+   MAIN CONTAINER
+============================ */
+.record-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ============================
+   HEADERS
+============================ */
+h1 {
+  font-size: 2rem;
+  color: #1f1f1f;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* ============================
+   RECORDER SECTION
+============================ */
+.recorder {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.timer {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.record-btn {
+  background: #f25c05;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.record-btn:hover {
+  background: #d94e04;
+}
+
+/* ============================
+   UPLOAD SECTION
+============================ */
+.upload-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.upload-box {
+  border: 2px dashed #f25c05;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fffaf6;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: #f25c05;
+  margin-bottom: 0.5rem;
+}
+
+.file-info {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.upload-btn {
+  margin-top: 1rem;
+  background: #f25c05;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: #d94e04;
+}
+
+.upload-input {
+  display: none;
+}
+
+/* ============================
+   LIVE FEEDBACK SECTION
+============================ */
+.live-feedback {
+  background: #fff9f3;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.live-feedback h3 {
+  color: #1f1f1f;
+  margin-bottom: 1rem;
+}
+
+.feedback-status p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-status span {
+  font-weight: bold;
+  color: #f25c05;
+}
+
+/* ============================
+   CAMERA FEED
+============================ */
+.camera-feed {
+  position: relative;
+  width: 320px;
+  height: 240px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #f25c05;
+}
+
+.camera-feed video,
+.camera-feed canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ============================
+   PERFORMANCE SCORE
+============================ */
+.performance-score {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fff7f0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.performance-score h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+#liveScore {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f25c05;
+}
+
+/* ============================
+   LOADING OVERLAY
+============================ */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+.loading-content {
+  text-align: center;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.loading-content i {
+  font-size: 3rem;
+  color: #f25c05;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Record - VocaLift</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="record.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="record-container">
+    <h1>Record Your Session</h1>
+    <p class="subtitle">Practice your speaking skills with AI-powered feedback</p>
+
+    <!-- Recording Section -->
+    <section class="recorder">
+      <h2>Ready to Record</h2>
+      <div class="video-preview">
+        <video id="previewVideo" autoplay muted></video>
+      </div>
+      <div class="timer" id="timer">00:00</div>
+      <button class="record-btn" id="startRecordBtn">
+        <i class="fas fa-microphone"></i> Start Recording
+      </button>
+      <button class="record-btn" id="stopRecordBtn" style="display:none;background:#ff3b30;">
+        <i class="fas fa-stop"></i> Stop Recording
+      </button>
+      <button class="record-btn" id="uploadRecordedBtn" style="display:none;background:#007bff;">
+        <i class="fas fa-upload"></i> Upload Recorded Video
+      </button>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <h3>Or Upload a Recording</h3>
+      <div class="upload-box">
+        <i class="fas fa-upload upload-icon"></i>
+        <p>Upload Audio/Video File</p>
+        <span class="file-info">Support for MP3, MP4, WAV, MOV files up to 100MB</span>
+        <input type="file" class="upload-input" id="uploadInput" accept="audio/*,video/*"/>
+        <button class="upload-btn" id="chooseFileBtn">Choose File</button>
+        <button class="upload-btn" id="uploadFileBtn" style="display:none;background:#007bff;">
+          Upload to Server
+        </button>
+      </div>
+    </section>
+
+    <section class="tips">
+      <h3>Recording Tips for Best Results</h3>
+      <div class="tips-grid">
+        <div class="tip"><i class="fas fa-camera"></i><strong> Position yourself clearly</strong><br/>Ensure good lighting and face the camera</div>
+        <div class="tip"><i class="fas fa-volume-up"></i><strong> Minimize background noise</strong><br/>Find a quiet environment for recording</div>
+        <div class="tip"><i class="fas fa-comment-dots"></i><strong> Speak clearly</strong><br/>Maintain consistent volume and pace</div>
+        <div class="tip"><i class="fas fa-chalkboard-teacher"></i><strong> Practice beforehand</strong><br/>Rehearse your content for better delivery</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+    <div class="loading-content">
+      <i class="fas fa-spinner fa-spin"></i>
+      <p>Analyzing your video, please wait...</p>
+    </div>
+  </div>
+
+  <script type="module" src="record.js"></script>
+  <script type="module" src="navbar.js"></script>
+</body>
+</html>

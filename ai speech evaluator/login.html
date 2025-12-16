@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VocaLift | Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+ <div class="container" id="container">
+  <div class="wrapper">
+    <!-- Left: Login Form -->
+    <div class="left" id="leftPanel">
+      <h2>Welcome to <span style="color: #f97316;">VocaLift</span> 🎤</h2>
+      <p>Sign in to analyze and improve your speaking skills!</p>
+
+    <input type="email" placeholder="Email Address" id="loginEmail" />
+   <input type="password" placeholder="Password" id="loginPassword" />
+
+
+      <button class="signin-btn" onclick="handleLogin()">Sign In</button>
+      <p id="loginStatus" class="status-message"></p>
+
+
+      <div class="google-btn" onclick="handleGoogleLogin()">
+        <img src="https://img.icons8.com/color/16/000000/google-logo.png" />
+        Sign in with Google
+      </div>
+    </div>
+
+    <!-- Right: Features and SignUp prompt -->
+    <div class="right" id="rightPanel">
+      <h1>New Here?</h1>
+      <p>Create an account to explore your voice!</p>
+
+      <div class="features">
+        <div>🎙 Record or Upload Speeches</div>
+        <div>🧠 Real-Time AI Feedback</div>
+        <div>📊 Track Your Progress</div>
+      </div>
+
+      <button onclick="window.location.href='signup.html'">Sign Up →</button>
+
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="login.js"></script>
+</body>
+</html>

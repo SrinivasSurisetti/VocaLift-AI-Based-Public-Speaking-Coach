@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Performance Analysis</title>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="analysis.css" />
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+
+  <main class="container">
+    <h1>Performance Analysis</h1>
+    <p class="subtitle">Detailed feedback on your speaking performance</p>
+
+    <!-- Session Selector -->
+    <div class="session-selector">
+      <div class="session-card active" data-session="job">
+        <h3>Job Interview Practice</h3>
+        <p id="session-date">--</p>
+        <div class="score">
+          <i class="fas fa-chart-line"></i> <span id="overall-score">--</span>
+        </div>
+        <small>INTERVIEW</small>
+      </div>
+      <div class="session-card" data-session="presentation">
+        <h3>Presentation Skills</h3>
+        <p>2024-01-14</p>
+        <div class="score">
+          <i class="fas fa-chart-line"></i> 7.9
+        </div>
+        <small>PRESENTATION</small>
+      </div>
+      <div class="session-card" data-session="public">
+        <h3>Public Speaking</h3>
+        <p>2024-01-13</p>
+        <div class="score">
+          <i class="fas fa-chart-line"></i> 8.2
+        </div>
+        <small>PUBLIC</small>
+      </div>
+    </div>
+
+    <!-- Overall Score -->
+    <div class="overall-score-box">
+      <h2 id="overall-score-big">--</h2>
+      <p class="trend" id="score-trend"><i class="fas fa-arrow-up"></i> +0.0 from last session</p>
+      <p class="message" id="score-message">Loading feedback...</p>
+      <div class="buttons">
+        <button class="btn orange"><i class="fas fa-share-alt"></i> Share Results</button>
+        <button class="btn outline" id="record-again-btn">
+          <i class="fas fa-microphone"></i> Record Again
+        </button>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="metrics">
+      <div class="metric-card orange">
+        <div class="metric-top">
+          <span class="emoji">🔊</span>
+          <p>Speech Clarity</p>
+        </div>
+        <div class="metric-bottom">
+          <strong id="clarity-score">--</strong>
+          <span class="trend up" id="clarity-trend">+0.0</span>
+        </div>
+      </div>
+
+      <div class="metric-card yellow">
+        <div class="metric-top">
+          <span class="emoji">🧍‍♂️</span>
+          <p>Confidence Level</p>
+        </div>
+        <div class="metric-bottom">
+          <strong id="confidence-score">--</strong>
+          <span class="trend up" id="confidence-trend">+0.0</span>
+        </div>
+      </div>
+
+      <div class="metric-card blue">
+        <div class="metric-top">
+          <span class="emoji">👁️</span>
+          <p>Body Language</p>
+        </div>
+        <div class="metric-bottom">
+          <strong id="body-score">--</strong>
+          <span class="trend" id="body-trend">--</span>
+        </div>
+      </div>
+
+      <div class="metric-card purple">
+        <div class="metric-top">
+          <span class="emoji">⏱️</span>
+          <p>Pace Control</p>
+        </div>
+        <div class="metric-bottom">
+          <strong id="pace-score">--</strong>
+          <span class="trend up" id="pace-trend">+0.0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid">
+      <!-- Key Insights -->
+      <div class="card insights">
+        <h3>Key Insights</h3>
+        <ul id="insights-list">
+          <!-- Will be filled dynamically -->
+        </ul>
+
+        <div class="transcript-section">
+          <h4>Transcript (First 200 characters)</h4>
+          <p id="transcript-text">Loading transcript...</p>
+        </div>
+      </div>
+
+      <!-- Detailed Analysis -->
+      <div class="card analysis">
+        <h3>Detailed Analysis</h3>
+
+        <div class="filler">
+          <strong>Filler Words</strong>
+          <p>Total Count: <span class="count" id="filler-count">--</span></p>
+          <p id="filler-details">Used: --</p>
+        </div>
+
+        <div class="pace">
+          <strong>Speaking Pace</strong>
+          <p>Words per minute: <span class="count" id="pace-value">--</span></p>
+          <p>Ideal: 100–160 WPM</p>
+        </div>
+
+        <div class="body">
+          <strong>Body Language</strong>
+          <p>Gesture Score: <span class="count" id="eye-contact-score">--</span></p>
+          <p id="posture-detail">Loading posture data...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommended Actions -->
+    <div class="card actions">
+      <h3>Recommended Actions</h3>
+      <div class="action orange">
+        <strong>Practice Breathing</strong>
+        <p>Work on breath control to reduce filler words.</p>
+        <a href="practice.html">Start Exercise →</a>
+      </div>
+      <div class="action green">
+        <strong>Tone Variation</strong>
+        <p>Practice adding emphasis and vocal variety.</p>
+        <a href="practice.html">View Scripts →</a>
+      </div>
+      <div class="action purple">
+        <strong>Record Daily</strong>
+        <p>Consistent practice leads to better performance scores.</p>
+        <a href="#">Set Reminder →</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="analysis.js"></script>
+  <script type="module" src="navbar.js"></script>
+</body>
+</html>

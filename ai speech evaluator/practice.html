@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practice Scripts | VocaLift</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="practice.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Practice Scripts</h1>
+    <p class="subtitle">Improve your speaking skills with guided practice sessions</p>
+
+    <section class="warmups">
+      <div class="warmup-card">
+        <div class="icon">⚡</div>
+        <div>
+          <b>Tongue Twisters</b><br>
+          <small>5 minutes</small>
+          <p>Improve articulation and clarity</p>
+          <a href="tonguetwisters.html" class="start-btn">▶ Start Exercise</a>
+        </div>
+      </div>
+
+      <div class="warmup-card">
+        <div class="icon">🫁</div>
+        <div>
+          <b>Breathing Exercises</b><br>
+          <small>3 minutes</small>
+          <p>Enhance breath control and reduce anxiety</p>
+          <a href="breathing.html" class="start-btn">▶ Start Exercise</a>
+        </div>
+      </div>
+
+      <div class="warmup-card">
+        <div class="icon">🎤</div>
+        <div>
+          <b>Vocal Range Practice</b><br>
+          <small>7 minutes</small>
+          <p>Expand your vocal variety and expression</p>
+          <a href="vocalrange.html" class="start-btn">▶ Start Exercise</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-filter">
+      <h3>Choose Practice Category</h3>
+      <div class="categories">
+        <button class="active">📁 Job Interview</button>
+        <button onclick="window.location.href='presentations1.html'">🧑‍🏫 Presentations</button>
+        <button onclick="window.location.href='Academic.html'">📘 Academic</button>
+        <button onclick="window.location.href='personalstories.html'">💗 Personal Stories</button>
+      </div>
+    </section>
+
+    <!-- Example Practice Cards -->
+    <section class="practice-cards">
+      <div class="card beginner">
+        <div class="card-header">
+          <h4>Tell Me About Yourself <span class="tag">Beginner</span></h4>
+          <p>Practice your elevator pitch and personal introduction</p>
+        </div>
+        <div class="card-body">
+          <b>Practice Prompt:</b>
+          <p>Introduce yourself professionally, highlighting your background, key skills, and career goals.</p>
+          <b>📝 Tips for Success:</b>
+          <ul>
+            <li>Keep it concise and relevant</li>
+            <li>Focus on professional achievements</li>
+            <li>End with your career objectives</li>
+          </ul>
+        </div>
+        <a href="interview-section1.html" class="start-btn">Start Practice</a>
+
+      </div>
+
+      <div class="card intermediate">
+        <div class="card-header">
+          <h4>Why Do You Want This Job? <span class="tag">Intermediate</span></h4>
+          <p>Articulate your motivation and interest in the role</p>
+        </div>
+        <div class="card-body">
+          <b>Practice Prompt:</b>
+          <p>Explain why you are interested in this specific position and company.</p>
+          <b>📝 Tips for Success:</b>
+          <ul>
+            <li>Research the company beforehand</li>
+            <li>Connect your skills to the role</li>
+            <li>Show genuine enthusiasm</li>
+          </ul>
+        </div>
+         <a href="interview-section2.html" class="start-btn">Start Practice</a>
+      </div>
+
+      <div class="card advanced">
+        <div class="card-header">
+          <h4>Describe a Challenge You Overcame <span class="tag">Advanced</span></h4>
+          <p>Use the STAR method to describe problem-solving skills</p>
+        </div>
+        <div class="card-body">
+          <b>Practice Prompt:</b>
+          <p>Share a specific example of a significant challenge you faced and how you overcame it.</p>
+          <b>📝 Tips for Success:</b>
+          <ul>
+            <li>Use STAR method (Situation, Task, Action, Result)</li>
+            <li>Choose a relevant example</li>
+            <li>Emphasize your problem-solving skills</li>
+          </ul>
+        </div>
+        <a href="interview-section3.html" class="start-btn">Start Practice</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="practice.js"></script>
+  <script type="module" src="navbar.js"></script>
+
+</body>
+</html>
