@@ -33,17 +33,18 @@ VocaLift is an AI-powered web application designed to help users improve their p
 ---
 
 ## 📂 Project Structure
+```
 VocaLift-AI-Based-Public-Speaking-Coach/
 │
-├── index.html
-├── dashboard.html
-├── css/
-│ └── style.css
-├── js/
-│ └── script.js
-├── assets/
-│ └── images
-└── README.md
+   ├── index.html
+   ├── dashboard.html
+   ├── css/
+      │ └── style.css
+   ├── js/
+      │ └── script.js
+   ├── assets/
+      │ └── images
+   └── README.md
 
 ---
 
