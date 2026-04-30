@@ -1,8 +1,5 @@
 # 🎤 VocaLift — AI-Based Public Speaking Coach
 
-🔗 Live Demo: https://vocallift.netlify.app/dashboard.html  
-🔗 GitHub Repository: https://github.com/SrinivasSurisetti/VocaLift-AI-Based-Public-Speaking-Coach  
-
 ---
 
 ## 📌 Overview
